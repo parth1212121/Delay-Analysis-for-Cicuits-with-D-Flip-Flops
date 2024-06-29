@@ -1,0 +1,13 @@
+PRIMARY_INPUTS abc def ghi
+INTERNAL_SIGNALS g n R k
+PRIMARY_OUTPUTS m A ghi
+NAND2 abc def m
+OR2 def ghi g
+AND2 ghi j n
+DFF g q
+DFF g s
+AND2 s n R
+XNOR2 m q k
+XOR2 k R A
+DFF abc j
+

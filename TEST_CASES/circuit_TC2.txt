@@ -1,0 +1,16 @@
+PRIMARY_INPUTS x0 x1 x2 x3
+INTERNAL_SIGNALS z0 z1 z2 z3 z4 z5 z6
+PRIMARY_OUTPUTS g f h
+INV x2 notx2
+INV x1 notx1
+AND2 x0 x2 z0
+AND2 x1 x3 z1
+DFF notx1 z5
+DFF z2 z4
+OR2 x0 notx2 z2
+OR2 notx1 x3 z3
+OR2 z0 z1 g
+DFF x3 z6
+AND2 z2 z3 h
+OR2 g h f
+
